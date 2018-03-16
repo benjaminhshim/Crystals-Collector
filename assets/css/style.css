@@ -17,7 +17,7 @@ article {
 }
 
 .points {
-    font-size: 36px;
+    font-size: 40px;
     font-family: 'Lekton', Helvetica, Arial, sans-serif;
 }
 
@@ -30,7 +30,8 @@ img {
 h1 {
     font-family: 'Molengo', Georgia, Times, serif;
     font-size: 56px;
-	line-height: 80px;
+    line-height: 80px;
+    margin: 10px;
 }
 
 p {
@@ -38,8 +39,13 @@ p {
     font-size: 16px;
 	line-height: 25px;
 }
-
-
+/* 
+.results {
+    box-shadow: 0px 0px 10px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+} */
 .results p {
     font-size: 24px;
 }
