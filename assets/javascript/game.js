@@ -118,10 +118,10 @@ $(document).ready(function () {
      
          })
 
-
-        
-
-
+    // $('.crystal').click(function(){
+    //     crystal = $(this).attr('value');
+    //     $('.your-points').html(crystal);
+    // })
 
 
 })
