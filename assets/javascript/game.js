@@ -71,33 +71,50 @@ $(document).ready(function () {
             userPoints = userPoints + bluePoints;
             $('.user-points').html(userPoints);
             console.log('Blue: ' + bluePoints)
-            console.log('User: ' + userPoints);
-
 
             if (userPoints == computer) {
                 ifWin();
             } else if (userPoints > computer) {
                 ifLose();
             }
-            
+
          })
      
          $('#orange').click(function(){
              userPoints = userPoints + orangePoints;
              $('.user-points').html(userPoints);   
              console.log('Orange: ' + orangePoints);   
+
+             if (userPoints == computer) {
+                ifWin();
+            } else if (userPoints > computer) {
+                ifLose();
+            }
+
          })
      
          $('#white').click(function(){
              userPoints = userPoints + whitePoints;
              $('.user-points').html(userPoints); 
              console.log('White: ' + whitePoints);
+
+             if (userPoints == computer) {
+                ifWin();
+            } else if (userPoints > computer) {
+                ifLose();
+            }
      
          })
          $('#green').click(function(){
              userPoints = userPoints + greenPoints;
              $('.user-points').html(userPoints); 
              console.log('Green: ' + greenPoints);
+
+             if (userPoints == computer) {
+                ifWin();
+            } else if (userPoints > computer) {
+                ifLose();
+            }
      
          })
 
