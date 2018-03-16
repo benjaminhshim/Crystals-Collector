@@ -3,7 +3,7 @@ $(document).ready(function () {
     // SET GLOBAL VARIABLES
 
     // COMPUTER GENERATES RANDOM NUMBER
-    var computer = Math.floor((Math.random() * 120) + 19);
+    var computer = Math.floor((Math.random() * (120 - 19 + 1) + 19));
     console.log('Computer: ' + computer);
     $('.computer').html(computer);
 
@@ -40,6 +40,8 @@ $(document).ready(function () {
         userPoints = 0
         $('.user-points').html(userPoints);
 
+        //$('#results').html('');
+
     }
 
     // IF USER MATCHES COMPUTER'S NUMBER
@@ -49,6 +51,7 @@ $(document).ready(function () {
     function ifWin() {
         wins++;
         $('#wins').html('Wins: ' + wins);
+        $('#results').html('You win! Click a crystal to play again');
         console.log('You win!');
         resetGame();
     }
@@ -60,6 +63,7 @@ $(document).ready(function () {
     function ifLose() {
         losses++;
         $('#losses').html('Losses: ' + losses);
+        $('#results').html('Game over. Click a crystal to play again');
         console.log('You lose!');   
         resetGame();  
     }
