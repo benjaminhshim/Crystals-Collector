@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     // COMPUTER GENERATES RANDOM NUMBER
     var computer = Math.floor((Math.random() * 120) + 19);
+    console.log('Computer: ' + computer);
     $('.computer').html(computer);
 
     // EACH CRYSTAL GENERATES ITS OWN RANDOM NUMBER
@@ -37,8 +38,30 @@ $(document).ready(function () {
         greenPoints = Math.floor((Math.random() * 12) + 1);
 
         userPoints = 0
-        $('.your-points').html(userPoints);
+        $('.user-points').html(userPoints);
 
+    }
+
+    // IF USER MATCHES COMPUTER'S NUMBER
+        // WINS +1
+        // PRINT TO WINDOW
+        // RESET GAME
+    function ifWin() {
+        wins++;
+        $('#wins').html('Wins: ' + wins);
+        console.log('You win!');
+        resetGame();
+    }
+
+    // IF USER MATCHES COMPUTER'S NUMBER
+        // WINS +1
+        // PRINT TO WINDOW
+        // RESET GAME 
+    function ifLose() {
+        losses++;
+        $('#losses').html('Losses: ' + losses);
+        console.log('You lose!');   
+        resetGame();  
     }
 
     // ASSIGN CLICK FUNCTIONALITY
@@ -46,42 +69,40 @@ $(document).ready(function () {
 
         $('#blue').click(function(event){
             userPoints = userPoints + bluePoints;
-            $('.your-points').html(userPoints);
+            $('.user-points').html(userPoints);
             console.log('Blue: ' + bluePoints)
+            console.log('User: ' + userPoints);
+
+
+            if (userPoints == computer) {
+                ifWin();
+            } else if (userPoints > computer) {
+                ifLose();
+            }
+            
          })
      
          $('#orange').click(function(){
              userPoints = userPoints + orangePoints;
-             $('.your-points').html(userPoints);   
+             $('.user-points').html(userPoints);   
              console.log('Orange: ' + orangePoints);   
          })
      
          $('#white').click(function(){
              userPoints = userPoints + whitePoints;
-             $('.your-points').html(userPoints); 
+             $('.user-points').html(userPoints); 
              console.log('White: ' + whitePoints);
      
          })
          $('#green').click(function(){
              userPoints = userPoints + greenPoints;
-             $('.your-points').html(userPoints); 
+             $('.user-points').html(userPoints); 
              console.log('Green: ' + greenPoints);
      
          })
 
 
-    //      if (userPoints == computer) {
-    //         wins++;
-    //         $('#wins').html('Wins: ' + wins);
-    //         console.log('you win');
-    //         resetGame();
-
-    //    } else if (userPoints > computer) {
-    //         losses++;
-    //         $('#losses').html('Losses: ' + losses);
-    //         console.log('you lose');   
-    //         resetGame();    
-    //     }
+        
 
 
 
