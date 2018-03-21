@@ -29,7 +29,7 @@ $(document).ready(function () {
         // EACH CRYSTAL SHOULD RE-GENERATE ITS OWN RANDOM NUMBER
         // TOTAL POINTS OF CRYSTALS SHOULD RESET TO 0
     function resetGame() {
-        computer = Math.floor((Math.random() * 120) + 19);
+        computer = Math.floor((Math.random() * (120 - 19 + 1) + 19));
         $('.computer').html(computer);
 
         bluePoints = Math.floor((Math.random() * 12) + 1);
